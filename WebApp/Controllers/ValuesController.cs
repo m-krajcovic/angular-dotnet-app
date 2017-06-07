@@ -15,7 +15,7 @@ namespace WebApplication2.Controllers
         [HttpGet]
         public IEnumerable<string> Get()
         {
-            return new string[] { "Hello", "World" };
+            return new string[] { "Hello", "World", "Bro", "Do", "You", "Even", "Angular?" };
         }
     }
 }

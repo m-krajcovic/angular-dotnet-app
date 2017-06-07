@@ -7,11 +7,14 @@ import { Http } from '@angular/http'
     styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-    constructor(private _httpService: Http) { }
-    apiValues: string[] = [];
-    ngOnInit() {
-        this._httpService.get('/api/values').subscribe(values => {
-            this.apiValues = values.json() as string[];
-        });
-    }
+  ngOnInit(): void { }
+
+  myData: Array<any>;
+
+  constructor(private http: Http) {
+
+    this.http.get('https://jsonplaceholder.typicode.com/photos')
+      .map(response => response.json())
+      .subscribe(res => this.myData = res);
+  }
 }
