@@ -1,4 +1,4 @@
-# C# + Angular project skeleton
+# .NET Core + Angular project skeleton
 
 ## Develop
 
